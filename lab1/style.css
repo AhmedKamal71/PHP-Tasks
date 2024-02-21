@@ -1,0 +1,59 @@
+
+    body {
+        background-color: grey;
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        color: aliceblue;
+ 
+    }
+
+    div {
+        display: flex;
+        border: 3px white solid;
+        width: 400px;
+        height: 400px;
+        justify-content: center;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    input {
+        display: block;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 8px;
+    }
+
+
+    h4 {
+        width: 200px;
+        display: block;
+
+    }
+
+    textarea{
+        display: block;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 8px;
+
+    }
+    #submit{
+        background: green;
+        margin-left: 70px;
+        color: white;
+        font-weight: bold;
+        border: none;
+        margin-top: 20px;
+
+    }
+    #clear{
+        background: red;
+        margin-left: 60px;
+        color: white;
+        font-weight: bold;
+        border: none;
+        margin-top: 20px;
+    }
+
