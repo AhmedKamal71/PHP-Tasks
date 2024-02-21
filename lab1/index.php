@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div>
+    <div id="parent">
         <form action="index.php" method="post">
             <h4><?php echo $message; ?></h4>
             <input type="text" name="name" value="<?php echo $name ?>" placeholder="name">
@@ -20,6 +20,12 @@
             <input id="submit" type="submit" name="submit" value="Submit">
             <input id="clear" name="clear" type="reset" value="clear form" />
         </form>
+    </div>
+    <div id="data">
+        <p><?php echo "Name: " . $name ?></p>
+        <p><?php echo "Email: " . $email ?></p>
+        <p><?php echo "Age: " . $age ?></p>
+        <p><?php echo "Message: " . $textarea ?></p>
     </div>
 </body>
 

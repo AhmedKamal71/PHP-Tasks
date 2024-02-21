@@ -8,14 +8,15 @@
  
     }
 
-    div {
+    #parent {
         display: flex;
         border: 3px white solid;
-        width: 400px;
-        height: 400px;
+        width: 500px;
+        height: 500px;
         justify-content: center;
         text-align: center;
         border-radius: 10px;
+        font-size: 20px;
     }
 
     input {
@@ -55,5 +56,18 @@
         font-weight: bold;
         border: none;
         margin-top: 20px;
+    }
+    #data{
+        display: block;
+        border: 3px white solid;
+        width: 500px;
+        height: 500px;
+        justify-content: left;
+        text-align: left;
+        border-radius: 10px;
+        font-size: 20px;
+        margin-left: 10px;
+        padding-left: 10px;
+        color: black;
     }
 
