@@ -1,0 +1,5 @@
+{
+    "autoload": {
+        "files":["logic.php","functions.php","config.php"]
+    }
+}
