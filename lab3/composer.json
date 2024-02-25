@@ -1,0 +1,6 @@
+{
+    "autoload": {
+        "files": ["index.php","config.php","counter.txt"],
+        "classmap": ["Visitors.php"]
+    }
+}
