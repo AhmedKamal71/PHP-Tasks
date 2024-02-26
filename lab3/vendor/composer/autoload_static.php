@@ -7,13 +7,12 @@ namespace Composer\Autoload;
 class ComposerStaticInitd751713988987e9331980363e24189ce
 {
     public static $files = array (
-        'ae2b2fbc1ae2e7a851a2af518947a092' => __DIR__ . '/../..' . '/index.php',
         'cfe4039aa2a78ca88e07dadb7b1c6126' => __DIR__ . '/../..' . '/config.php',
-        'dc56ca54130f20133331b74b435a8e53' => __DIR__ . '/../..' . '/counter.txt',
     );
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Visitors' => __DIR__ . '/../..' . '/Visitors.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

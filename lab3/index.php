@@ -9,17 +9,11 @@
 
 <body>
     <?php
-    include_once("Visitors.php");
-    include_once("config.php");
+    require_once("vendor/autoload.php");
+    // include_once("config.php");
     $counter = new Visitors(myFile);
     $counter->counterFunction();
     ?>
-
 </body>
 
 </html>
-
-
-
-
-<?php
