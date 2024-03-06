@@ -25,10 +25,13 @@
 </html>
 <!---------------------------------------------------PHP--------------------------------------------------->
 <?php
+// Next And Previous Navigators
 require_once("vendor/autoload.php");
+
 $conn = new MainProgram;              // Create Object From The Main Class
 $fields = ["id", "PRODUCT_code", "product_name"];     // Array of data attributes
 $items = array();
+
 $page = isset($_GET["page"]) ? $_GET["page"] : 0;      // Page Navigator 
 if (($_SERVER["REQUEST_METHOD"] == "GET") && isset($_GET["click"])) {
     if ($_GET["click"] == "prev") {
