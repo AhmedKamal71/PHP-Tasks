@@ -7,6 +7,7 @@ class MainProgram implements DbHandler
 {
     private $_capsule;
 
+
     // Constructor
     public function __construct()
     {
@@ -70,8 +71,34 @@ class MainProgram implements DbHandler
     public function search_by_column($name_column, $value)
     {
         $items = Items::where($name_column, "like", "%$value%")->get();
-        if (count($items) > 0)
+        if ($name_column == "" || $value == "") {
+            echo "<div style='display:flex;
+            justify-content:center;
+            margin-top:20px;
+            color:red;
+            font-weight:bold;'>Please Enter A Value</div>";
             return $items;
+        }
+        $isExist = Items::where($name_column, "=", $value)->exists();
+        if ($isExist) {
+            if (count($items) > 0)
+                return $items;
+        } else {
+            echo "This value deosn't exists";
+            return $items;
+        }
+    }
+
+    //--------------------------------------------------------------------------------------------------------
+    // Insert Function
+    public function insert_item($data)
+    {
+        if (!empty($data)) {
+            $this->_capsule->table("items")->insert($data);
+            echo "<div style='display:flex;justify-content:center;'>Data Added successfully</div> ";
+            return true;
+        }
+        return false;
     }
 }
 // -------------------------------------------------------------------------------------------------------

@@ -36,18 +36,59 @@ $conn->disconnect();
 ?>
 
 <style>
-    body {
-        background-color: aliceblue;
-        display: flex;
-        align-items: center;
-        padding-left: 300px;
+    /* Reset some default styles */
+    body,
+    h1,
+    h2,
+    p,
+    table {
+        margin: 0;
+        padding: 0;
     }
 
-    table,
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        color: #333;
+        text-align: center;
+    }
+
+    table {
+        width: 90%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        margin-left: 40px;
+    }
+
     th,
     td {
-        border: 2px green solid;
-        text-align: center;
-        border-radius: 5px;
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #4caf50;
+        color: #fff;
+    }
+
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+
+    input {
+        border-radius: 20px;
     }
 </style>
