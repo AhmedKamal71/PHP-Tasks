@@ -6,10 +6,14 @@ require_once("./DbHandler.php");
 class MainProgram implements DbHandler
 {
     private $_capsule;
+
+    // Constructor
     public function __construct()
     {
         $this->_capsule = new Capsule;
     }
+    // -------------------------------------------------------------------------------------------------------
+    // Connect Function
     public function connect()
     {
         try {
@@ -28,6 +32,8 @@ class MainProgram implements DbHandler
             return false;
         }
     }
+    //----------------------------------------------------------------------------------------------------------
+    // Get All Data
     public function get_data($fields = array(),  $start = 0)
     {
         $items = Items::skip($start)->take(5)->get();
@@ -39,6 +45,8 @@ class MainProgram implements DbHandler
             return $items;
         }
     }
+    // -------------------------------------------------------------------------------------------------------
+    // Disconnect Function
     public function disconnect()
     {
         try {
@@ -49,12 +57,16 @@ class MainProgram implements DbHandler
             return false;
         }
     }
+    //--------------------------------------------------------------------------------------------------------
+    // Get Specific Items
     public function get_record_by_id($id, $primary_key)
     {
         $item = Items::where($primary_key, "=", $id)->get();
         if (count($item) > 0)
             return $item[0];
     }
+    //--------------------------------------------------------------------------------------------------------
+    // Search Function
     public function search_by_column($name_column, $value)
     {
         $items = Items::where($name_column, "like", "%$value%")->get();
@@ -62,3 +74,4 @@ class MainProgram implements DbHandler
             return $items;
     }
 }
+// -------------------------------------------------------------------------------------------------------

@@ -19,7 +19,6 @@
 
             <input type="submit" value="Submit" name="submit">
         </form>
-
     </div>
 </body>
 
@@ -28,7 +27,7 @@
 <?php
 require_once("vendor/autoload.php");
 $conn = new MainProgram;              // Create Object From The Main Class
-$fields = ["id", "PRODUCT_code",  "product_name"];     // Array of data attributes
+$fields = ["id", "PRODUCT_code", "product_name"];     // Array of data attributes
 $items = array();
 $page = isset($_GET["page"]) ? $_GET["page"] : 0;      // Page Navigator 
 if (($_SERVER["REQUEST_METHOD"] == "GET") && isset($_GET["click"])) {
@@ -51,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["submit"], $_POST["nam
     $items = $conn->search_by_column($_POST["name_column"], $_POST["value"]);
 }
 
-// Create Table Of Data
+// Create Table Of Specific Glass
 if (count($items) > 0) {
     echo '<table >';
     echo '<tr>';

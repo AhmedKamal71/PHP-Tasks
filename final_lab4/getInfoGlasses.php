@@ -10,7 +10,7 @@ if (($_SERVER["REQUEST_METHOD"] == "GET") && isset($_GET["id"])) {
     }
 }
 
-
+// Create Table Of All Data
 if (!empty($item) > 0) {
     echo  '<table>';
     echo   '<tr>';
