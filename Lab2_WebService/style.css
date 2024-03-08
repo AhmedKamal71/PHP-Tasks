@@ -1,0 +1,43 @@
+body {
+  background-color: aliceblue;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navigate {
+  margin-left: 120px;
+
+  margin-top: 10px;
+}
+
+table {
+  background-color: aliceblue;
+  border: 3px green solid;
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+}
+td {
+  border: 2px black solid;
+  background-color: whitesmoke;
+  border-radius: 5px;
+}
+th {
+  background-color: green;
+  border: 2px green solid;
+  border-radius: 5px;
+}
+a:hover {
+  color: red;
+}
+form {
+  margin-top: auto;
+  margin-bottom: 20px;
+}
