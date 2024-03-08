@@ -98,6 +98,7 @@ class MainProgram implements DbHandler
         return false;
     }
 
+    // Git URL Function
     public function get_url()
     {
         $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
@@ -117,6 +118,7 @@ class MainProgram implements DbHandler
         return $product_id;
     }
 
+    // Validate the method type
     public function handle_methods($items, $product_id)
     {
         $method = $_SERVER["REQUEST_METHOD"];
